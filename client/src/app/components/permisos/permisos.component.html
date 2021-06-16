@@ -1,0 +1,94 @@
+<!-- Button trigger modal 1 -->
+<h4>Permisos</h4>
+<p>
+    <ngb-alert #staticAlert [type]="alert.type" show="false" [dismissible]="false">{{ alert.message }}</ngb-alert>
+</p>
+<a class="btn btn-primary add-button" data-toggle="modal" data-target="#exampleModal">
+    <fa-icon [icon]="faPlus"></fa-icon>Agregar permisos
+</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Rol</th>
+        <th scope="col">Actualizar</th>
+        <th scope="col">Inactivar</th>
+        <th scope="col">Crear</th>
+        <th scope="col">Operaciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let permiso of permisos">
+        <td>{{permiso.nombre}}</td>
+        <td>{{permiso.actualizar}}</td>
+        <td>{{permiso.inactivar}}</td>
+        <td>{{permiso.crear}}</td>
+        <td>
+            <a class="btn btn-danger operation-button" data-toggle="modal" data-target="#exampleModal2" (click)="deletePermiso(permiso.id)"><fa-icon [icon]="faTrash"></fa-icon></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <select type="number" class="form-control" [(ngModel)]="selectedRol" (ngModelChange)="toNumberRol()" name="rol">
+                    <option *ngFor="let rol of roles" [ngValue]="rol.id">{{rol.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" [(ngModel)]="selectedActualizar" (ngModelChange)="toActualizar()" name="actualizar">
+                Actualizar
+                <input type="checkbox" [(ngModel)]="selectedInactivar" (ngModelChange)="toInactivar()" name="inactivar">
+                Inactivar
+                <input type="checkbox" [(ngModel)]="selectedCrear" (ngModelChange)="toCrear()" name="crear">
+                Crear
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="savePermiso(selectedRol, selectedActualizar, selectedInactivar, selectedCrear)" data-dismiss="modal">Agregar</button>
+    </form>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal 2 -->
+<!-- <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+                <select type="number" class="form-control" [(ngModel)]="selectedRol" (ngModelChange)="toNumberRol()" name="rol">
+                    <option *ngFor="let rol of roles" [ngValue]="rol.id">{{rol.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" [(ngModel)]="selectedActualizar" (ngModelChange)="toActualizar()" name="actualizar">
+                Actualizar
+                <input type="checkbox" [(ngModel)]="selectedInactivar" (ngModelChange)="toInactivar()" name="inactivar">
+                Inactivar
+                <input type="checkbox" [(ngModel)]="selectedCrear" (ngModelChange)="toCrear()" name="crear">
+                Crear
+            </div>
+           <button type="submit" class="btn btn-primary" (click)="updatePermiso(selectedRol, selectedActualizar, selectedInactivar, selectedCrear)" data-dismiss="modal">Guardar cambios</button>
+        </form>
+        </div>
+      </div>
+    </div>
+</div> -->

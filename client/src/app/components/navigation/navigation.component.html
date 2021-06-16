@@ -1,0 +1,44 @@
+<!-- Sidebar -->
+<div id="sidebar-container" class="bg-primary">
+    <div class="logo">
+        <h4 class="text-light font-weight-bold mb-0">Reservas</h4>
+    </div>
+    <div class="menu">
+        <div class="accordion" id="accordionConfig">
+            <a class="d-block text-light p-3 border-0 collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Configuración 
+            </a>
+            <div id="collapseOne" class="collapse" data-parent="#accordionConfig">
+                <a routerLink="/usuarios" class="d-block text-light p-3 border-0"><fa-icon [icon]="faUserFriends"></fa-icon>
+                    Usuarios</a>
+                <a routerLink="/roles" class="d-block text-light p-3 border-0"><fa-icon [icon]="faUserTag"></fa-icon>
+                    Roles</a>
+                <a routerLink="/asocrol" class="d-block text-light p-3 border-0"><fa-icon [icon]="faExchangeAlt"></fa-icon>
+                    Asociar rol</a>
+                <a routerLink="/permisos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faShieldAlt"></fa-icon>
+                    Permisos</a>
+                <a routerLink="/ciudades" class="d-block text-light p-3 border-0"><fa-icon [icon]="faCity"></fa-icon>
+                    Ciudades</a>
+            </div>
+        </div>
+        <div class="accordion" id="accordionContabilidad">
+            <a class="d-block text-light p-3 border-0 collapseTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                Contabilidad
+            </a>
+            <div id="collapseTwo" class="collapse" data-parent="#accordionContabilidad">
+                <a routerLink="/ingresos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+                    Ingresos</a>
+                <a routerLink="/gastos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faMoneyBillWave"></fa-icon>
+                    Gastos</a>
+                <a routerLink="/bancos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faPiggyBank"></fa-icon>
+                    Bancos</a>
+                <a routerLink="/tarjetas" class="d-block text-light p-3 border-0"><fa-icon [icon]="faCreditCard"></fa-icon>
+                    Tarjetas</a>
+                <a routerLink="/cuentas" class="d-block text-light p-3 border-0"><fa-icon [icon]="faSortNumericUpAlt"></fa-icon>
+                    Forma de pago: Cuenta bancaria</a>
+                <a routerLink="/pagos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faMoneyCheck"></fa-icon>
+                    Forma de pago: Tarjeta</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<!-- Button trigger modal 1 -->
+<h4>Asociar rol</h4>
+<p>
+  <ngb-alert #staticAlert [type]="alert.type" show="false" [dismissible]="false">{{ alert.message }}</ngb-alert>
+</p>
+<a class="btn btn-primary add-button" data-toggle="modal" data-target="#exampleModal">
+    <i class="fa fa-plus"></i>Asociar rol
+</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Rol</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Operaciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let asocrol of asocroles">
+        <td>{{asocrol.nombre}}</td>
+        <td>{{asocrol.usuario}}</td>
+        <td>
+            <a class="btn btn-danger operation-button" data-toggle="modal" (click)="deleteAsocrol(asocrol.id)"><i class="fas fa-trash"></i></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+        <div class="form-group">
+            <select type="number" class="form-control" [(ngModel)]="selectedUsuario" (ngModelChange)="toNumberUsuario()" name="usuario">
+                <option *ngFor="let usuario of usuarios" [ngValue]="usuario.id">{{usuario.usuario}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select type="number" class="form-control" [(ngModel)]="selectedRol" (ngModelChange)="toNumberRol()" name="rol">
+                <option *ngFor="let rol of roles" [ngValue]="rol.id">{{rol.nombre}}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="saveAsocrol(selectedUsuario, selectedRol)" data-dismiss="modal">Agregar</button>
+    </form>
+    </div>
+    </div>
+</div>
+</div>
+
+

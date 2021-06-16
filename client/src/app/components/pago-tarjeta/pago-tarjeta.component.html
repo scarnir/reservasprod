@@ -1,0 +1,88 @@
+<!-- Button trigger modal 1 -->
+<h4>Forma de pago: Tarjeta</h4>
+<p>
+  <ngb-alert #staticAlert [type]="alert.type" show="false" [dismissible]="false">{{ alert.message }}</ngb-alert>
+</p>
+<a class="btn btn-primary add-button" data-toggle="modal" data-target="#exampleModal">
+    <fa-icon [icon]="faPlus"></fa-icon>Agregar pago de tarjeta
+</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Nro. Tarjeta</th>
+        <th scope="col">Tarjeta</th>
+        <th scope="col">Descripción</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pagotarjeta of pagotarjetas">
+        <td>{{pagotarjeta.nro_tarjeta}}</td>
+        <td>{{pagotarjeta.nombre}}</td>
+        <td>{{pagotarjeta.descripcion}}</td>
+        <td>
+            <a class="btn btn-primary operation-button" data-toggle="modal" data-target="#exampleModal2" (click)="getPago(pagotarjeta.id)"><fa-icon [icon]="faEdit"></fa-icon></a>
+            <a class="btn btn-danger operation-button" data-toggle="modal" (click)="deletePago(pagotarjeta.id)"><fa-icon [icon]="faTrash"></fa-icon></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar pago de tarjeta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="pagotarjeta.nro_tarjeta" name="nro_tarjeta" class="form-control" placeholder="Nro. Tarjeta">
+            </div>
+            <div class="form-group">
+                <select type="number" class="form-control" [(ngModel)]="selectedTarjeta" (ngModelChange)="toNumberTarjeta()" name="id_tarjeta">
+                    <option *ngFor="let tarjeta of tarjetas" [ngValue]="tarjeta.id">{{tarjeta.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="pagotarjeta.descripcion" name="descripcion" class="form-control" placeholder="Descripcion">
+            </div>
+        <button type="submit" class="btn btn-primary" (click)="savePago(selectedTarjeta)" data-dismiss="modal">Agregar</button>
+    </form>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Editar pago de tarjeta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="pagotarjeta.nro_tarjeta" name="nro_tarjeta" class="form-control" placeholder="Nro. Tarjeta">
+            </div>
+            <div class="form-group">
+                <select type="number" class="form-control" [(ngModel)]="selectedTarjeta" (ngModelChange)="toNumberTarjeta()" name="id_tarjeta">
+                    <option *ngFor="let tarjeta of tarjetas" [ngValue]="tarjeta.id">{{tarjeta.nombre}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]="pagotarjeta.descripcion" name="descripcion" class="form-control" placeholder="Descripcion">
+            </div>
+           <button type="submit" class="btn btn-primary" (click)="updatePago(selectedTarjeta)" data-dismiss="modal">Guardar cambios</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>

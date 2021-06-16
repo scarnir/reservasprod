@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #023e8a;
+    --light: #ffffff;
+    --grey: #efefef;
+}
+
+h4 {
+    text-align: center;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+.bg-content {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    width: 80% !important;
+    margin-left: 20rem;
+}
+
+a.add-button {
+    padding: 0.5rem !important;
+    font-size: 0.6rem !important;
+    float: right;
+    position: relative;
+    right: 4rem;
+    margin-bottom: 1rem;
+}
+
+a.operation-button {
+    padding: 0.5rem 1rem;
+}
+
+a.text-light {
+    padding-left: 2rem !important;
+}
+
+a.text-light:hover {
+    background: #002855;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-primary { background-color: var(--primary) !important; }
+
+.bg-light { background-color: var(--light) !important; }
+
+.bg-grey { background-color: var(--grey) !important; }
+
+.bg-mix { background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0); }
+
+.btn-primary {
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+
+#sidebar-container {
+    min-height: 100vh;
+    position: fixed;
+}
+  
+#sidebar-container .logo{
+    padding: 3rem 0;
+}
+  
+#sidebar-container .menu {
+    width: 18rem;
+}
+
+#content {
+    padding-bottom: 5rem;
+}
+
+.avatar {
+    max-width: 35px;
+}
+
+.btn-search {
+    right: 0;
+}
+
+.stat {
+    border-right: 1px solid var(--grey);
+}
+
+table {
+    width: 100%;
+}
+
+.alert {
+    width: 90%;
+}
