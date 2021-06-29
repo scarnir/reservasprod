@@ -9,7 +9,8 @@ import { faHandHoldingUsd,
           faUserTag,
           faExchangeAlt,
           faShieldAlt,
-          faCity } from '@fortawesome/free-solid-svg-icons';
+          faCity,
+          faStickyNote } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -29,6 +30,7 @@ export class NavigationComponent implements OnInit {
   faExchangeAlt = faExchangeAlt;
   faShieldAlt = faShieldAlt;
   faCity = faCity;
+  faStickyNote = faStickyNote;
 
   constructor() { }
 

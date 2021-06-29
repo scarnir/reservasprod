@@ -5,6 +5,7 @@ import { Usuario } from 'src/app/models/usuario';
 import { AsocrolService } from '../../services/asocrol.service';
 import { RolesService } from '../../services/roles.service';
 import { UsuariosService } from '../../services/usuarios.service';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,6 +14,9 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrls: ['./asocrol.component.css']
 })
 export class AsocrolComponent implements OnInit {
+
+  faPlus = faPlus;
+  faTrash = faTrash;
 
   alert: any = [];
 

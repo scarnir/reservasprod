@@ -20,12 +20,9 @@ import { RolesListComponent } from './components/roles-list/roles-list.component
 import { AsocrolComponent } from './components/asocrol/asocrol.component';
 import { PermisosComponent } from './components/permisos/permisos.component';
 import { CiudadesComponent } from './components/ciudades/ciudades.component';
-import { GastosComponent } from './components/gastos/gastos.component';
-import { IngresosComponent } from './components/ingresos/ingresos.component';
-import { BancosComponent } from './components/bancos/bancos.component';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
-import { CuentasComponent } from './components/cuentas/cuentas.component';
-import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { ConceptosComponent } from './components/conceptos/conceptos.component';
 
 
 @NgModule({
@@ -37,12 +34,9 @@ import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.com
     AsocrolComponent,
     PermisosComponent,
     CiudadesComponent,
-    GastosComponent,
-    IngresosComponent,
-    BancosComponent,
-    TarjetasComponent,
-    CuentasComponent,
-    PagoTarjetaComponent
+    ReservasComponent,
+    RegistroComponent,
+    ConceptosComponent
   ],
   imports: [
     BrowserModule,

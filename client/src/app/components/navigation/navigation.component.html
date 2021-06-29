@@ -26,18 +26,19 @@
                 Contabilidad
             </a>
             <div id="collapseTwo" class="collapse" data-parent="#accordionContabilidad">
-                <a routerLink="/ingresos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faHandHoldingUsd"></fa-icon>
-                    Ingresos</a>
-                <a routerLink="/gastos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faMoneyBillWave"></fa-icon>
-                    Gastos</a>
-                <a routerLink="/bancos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faPiggyBank"></fa-icon>
-                    Bancos</a>
-                <a routerLink="/tarjetas" class="d-block text-light p-3 border-0"><fa-icon [icon]="faCreditCard"></fa-icon>
-                    Tarjetas</a>
-                <a routerLink="/cuentas" class="d-block text-light p-3 border-0"><fa-icon [icon]="faSortNumericUpAlt"></fa-icon>
-                    Forma de pago: Cuenta bancaria</a>
-                <a routerLink="/pagos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faMoneyCheck"></fa-icon>
-                    Forma de pago: Tarjeta</a>
+                <a routerLink="/registros" class="d-block text-light p-3 border-0"><fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+                    Ingresos y gastos</a>
+                <a routerLink="/conceptos" class="d-block text-light p-3 border-0"><fa-icon [icon]="faStickyNote"></fa-icon>
+                    Conceptos</a>
+            </div>
+        </div>
+        <div class="accordion" id="accordionReservas">
+            <a class="d-block text-light p-3 border-0 collapseThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                Reservas
+            </a>
+            <div id="collapseThree" class="collapse" data-parent="#accordionRerservas">
+                <a routerLink="/reservas" class="d-block text-light p-3 border-0"><i class="fas fa-hand-holding-usd"></i>
+                    Ver reservas</a>
             </div>
         </div>
     </div>

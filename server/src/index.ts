@@ -8,12 +8,10 @@ import rolesRoutes from './routes/rolesRoutes';
 import asocrolRoutes from './routes/asocrolRoutes';
 import permisosRoutes from './routes/permisosRoutes';
 import ciudadesRoutes from './routes/ciudadesRoutes';
-import gastosRoutes from './routes/gastosRoutes';
-import ingresosRoutes from './routes/ingresosRoutes';
-import bancosRoutes from './routes/bancosRoutes';
-import tarjetasRoutes from './routes/tarjetasRoutes';
-import cuentaBancariaRoutes from './routes/cuentaBancariaRoutes';
-import pagoTarjetaRoutes from './routes/pagoTarjetaRoutes';
+import registrosRoutes from './routes/registrosRoutes';
+import reservasRoutes from './routes/reservasRoutes';
+import tipoRegistroRoutes from './routes/tipoRegistroRoutes';
+import conceptosRoutes from './routes/conceptosRoutes';
 
 class Server {
 
@@ -40,12 +38,10 @@ class Server {
         this.app.use('/api/asocroles', asocrolRoutes);
         this.app.use('/api/permisos', permisosRoutes);
         this.app.use('/api/ciudades', ciudadesRoutes);
-        this.app.use('/api/gastos', gastosRoutes);
-        this.app.use('/api/ingresos', ingresosRoutes);
-        this.app.use('/api/bancos', bancosRoutes);
-        this.app.use('/api/tarjetas', tarjetasRoutes);
-        this.app.use('/api/cuentas', cuentaBancariaRoutes);
-        this.app.use('/api/pago', pagoTarjetaRoutes);
+        this.app.use('/api/registros', registrosRoutes);
+        this.app.use('/api/tiporegistro', tipoRegistroRoutes);
+        this.app.use('/api/conceptos', conceptosRoutes);
+        this.app.use('/api/reservas', reservasRoutes);
     }
 
     start(): void {

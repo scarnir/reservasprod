@@ -5,12 +5,9 @@ import { RolesListComponent } from './components/roles-list/roles-list.component
 import { AsocrolComponent } from './components/asocrol/asocrol.component';
 import { PermisosComponent } from './components/permisos/permisos.component';
 import { CiudadesComponent } from './components/ciudades/ciudades.component';
-import { GastosComponent } from './components/gastos/gastos.component';
-import { IngresosComponent } from './components/ingresos/ingresos.component';
-import { BancosComponent } from './components/bancos/bancos.component';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
-import { CuentasComponent } from './components/cuentas/cuentas.component';
-import { PagoTarjetaComponent } from './components/pago-tarjeta/pago-tarjeta.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
+import { ConceptosComponent } from './components/conceptos/conceptos.component';
 
 
 const routes: Routes = [
@@ -40,28 +37,16 @@ const routes: Routes = [
     component: CiudadesComponent
   },
   {
-    path: 'gastos',
-    component: GastosComponent
+    path: 'registros',
+    component: RegistroComponent
   },
   {
-    path: 'ingresos',
-    component: IngresosComponent
+    path: 'reservas',
+    component: ReservasComponent
   },
   {
-    path: 'bancos',
-    component: BancosComponent
-  },
-  {
-    path: 'tarjetas',
-    component: TarjetasComponent
-  },
-  {
-    path: 'cuentas',
-    component: CuentasComponent
-  },
-  {
-    path: 'pagos',
-    component: PagoTarjetaComponent
+    path: 'conceptos',
+    component: ConceptosComponent
   }
 ];
 

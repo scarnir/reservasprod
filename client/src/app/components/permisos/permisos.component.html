@@ -42,7 +42,8 @@
     <div class="modal-body">
         <form>
             <div class="form-group">
-                <select type="number" class="form-control" [(ngModel)]="selectedRol" (ngModelChange)="toNumberRol()" name="rol">
+                <label for="rol">Rol</label>
+                <select type="number" id="rol" class="form-control" [(ngModel)]="selectedRol" (ngModelChange)="toNumberRol()" name="rol">
                     <option *ngFor="let rol of roles" [ngValue]="rol.id">{{rol.nombre}}</option>
                 </select>
             </div>
